@@ -3,14 +3,10 @@ package br.com.emerson.services
 import br.com.emerson.exception.ResourceNotFoundException
 import br.com.emerson.model.Person
 import br.com.emerson.repository.PersonRepository
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class PersonServices {
-
-    @Autowired
-    private lateinit var repository: PersonRepository
+class PersonServices(private val repository: PersonRepository) {
 
     fun create(person: Person): Person = repository.save(person)
 

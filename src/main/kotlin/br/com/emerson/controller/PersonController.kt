@@ -2,16 +2,12 @@ package br.com.emerson.controller
 
 import br.com.emerson.model.Person
 import br.com.emerson.services.PersonServices
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/person")
-class PersonController {
-
-    @Autowired
-    private lateinit var service: PersonServices
+class PersonController(private val service: PersonServices) {
 
     @GetMapping
     fun findAll(): List<Person> = service.findAll()
