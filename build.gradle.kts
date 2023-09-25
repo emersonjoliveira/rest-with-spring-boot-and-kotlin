@@ -33,7 +33,7 @@ dependencies {
 
     testImplementation ("org.testcontainers:mysql:1.16.3")
 	testImplementation ("io.rest-assured:rest-assured:5.3.2")
-	testImplementation ("org.mockito:mockito-core:4.4.0")
+	testImplementation ("org.mockito:mockito-junit-jupiter:5.4.0")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
