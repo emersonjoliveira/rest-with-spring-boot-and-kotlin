@@ -27,11 +27,14 @@ dependencies {
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.flywaydb:flyway-mysql")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.mysql:mysql-connector-j")
-	testImplementation("org.testcontainers:mysql:1.19.0")
-	testImplementation("io.rest-assured:rest-assured:5.2.0")
-	testImplementation("io.mockito:mockito-core:5.5.0")
+
+    testImplementation ("org.testcontainers:mysql:1.16.3")
+	testImplementation ("io.rest-assured:rest-assured:5.3.2")
+	testImplementation ("org.mockito:mockito-core:4.4.0")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

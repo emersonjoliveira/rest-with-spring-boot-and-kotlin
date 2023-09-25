@@ -1,11 +1,10 @@
-package br.com.emerson.configs.testcontainers
+package br.com.emerson.testcontainers
 
 import org.springframework.context.ApplicationContextInitializer
 import org.springframework.context.ConfigurableApplicationContext
 import org.springframework.core.env.MapPropertySource
 import org.springframework.test.context.ContextConfiguration
 import org.testcontainers.containers.MySQLContainer
-import org.testcontainers.lifecycle.Startable
 import org.testcontainers.lifecycle.Startables
 import java.util.stream.Stream
 
@@ -27,9 +26,9 @@ open class AbstractIntegrationTest {
 
             private fun createConnectionConfiguration(): MutableMap<String, Any> {
                 return java.util.Map.of(
-                    "sptring.datasource.url", mysql.jdbcUrl,
-                    "sptring.datasource.username", mysql.username,
-                    "sptring.datasource.password", mysql.password
+                    "spring.datasource.url", mysql.jdbcUrl,
+                    "spring.datasource.username", mysql.username,
+                    "spring.datasource.password", mysql.password
                 )
             }
 
